@@ -1,0 +1,9 @@
+alias collectstatic="sudo salt-call django.collectstatic settings.vagrant_settings /home/vagrant/mysite.com"
+
+alias migrate_database="sudo salt-call django.command settings.vagrant_settings migrate /home/vagrant/mysite.com"
+
+alias restart_apache="sudo salt-call apache.signal restart"
+
+alias call_highstate="sudo salt-call state.highstate"
+
+alias myproject="source /home/vagrant/mysite.com/bin/activate && export DJANGO_SETTINGS_MODULE=settings.vagrant_settings"
